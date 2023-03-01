@@ -1,0 +1,23 @@
+#Database Configuration
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/testing
+    username: postgres
+    password: diallodev
+  jpa:
+    database: postgresql
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+
+# Server Configuration
+server:
+  port: 8081
+  error:
+    include-message: always
+    include-binding-errors: always
